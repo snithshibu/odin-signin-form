@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Optional: Norse Bold font (adjust path or replace with your own font) -->
+    <style>
+      @font-face {
+        font-family: "Norse Bold";
+        src: url("fonts/Norse-Bold.otf") format("opentype");
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <aside class="image-panel">
+        <div class="logo-banner">
+          <img src="img/odin-logo.png" alt="Odin logo" class="logo-img" />
+          <span class="logo-text">ODIN</span>
+        </div>
+        <p class="credit">
+          Photo by
+          <a href="https://unsplash.com/photos/25xggax4bSA" target="_blank"
+            >Halie West</a
+          >
+          on Unsplash
+        </p>
+      </aside>
+
+      <main class="content">
+        <section class="intro">
+          <p>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams.
+          </p>
+          <p>Sign up now to get started.</p>
+          <p>You know you want to.</p>
+        </section>
+
+        <section class="form-section">
+          <h2>Let’s do this!</h2>
+          <form action="#" method="post" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="first-name">FIRST NAME</label>
+                <input
+                  id="first-name"
+                  name="first-name"
+                  type="text"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="last-name">LAST NAME</label>
+                <input
+                  id="last-name"
+                  name="last-name"
+                  type="text"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="email">EMAIL</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+
+              <div class="field">
+                <label for="phone">PHONE NUMBER</label>
+                <input id="phone" name="phone" type="tel" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="password">PASSWORD</label>
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  required
+                  minlength="8"
+                />
+              </div>
+
+              <div class="field">
+                <label for="confirm-password">CONFIRM PASSWORD</label>
+                <input
+                  id="confirm-password"
+                  name="confirm-password"
+                  type="password"
+                  required
+                  minlength="8"
+                />
+              </div>
+            </div>
+
+            <button type="submit" class="primary-btn">Create Account</button>
+          </form>
+        </section>
+
+        <section class="login-text">
+          <p>
+            Already have an account?
+            <a href="#">Log in</a>
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

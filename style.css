@@ -1,0 +1,161 @@
+/* Basic reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page baseline */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+.page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left image panel */
+.image-panel {
+  flex: 1 1 40%;
+  background-image: url("img/background.jpg"); /* <-- change path */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #ffffff;
+}
+
+.logo-banner {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  margin-top: 20%;
+}
+
+.logo-img {
+  height: 80px;
+}
+
+.logo-text {
+  font-family: "Norse Bold", serif;
+  font-size: 3rem;
+  letter-spacing: 0.15em;
+}
+
+.credit {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.credit a {
+  color: #ffffff;
+}
+
+/* Right content area */
+.content {
+  flex: 1 1 60%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro,
+.form-section,
+.login-text {
+  padding: 1.5rem 3rem;
+}
+
+.intro p + p {
+  margin-top: 0.75rem;
+}
+
+/* Form card */
+.form-section {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-section h2 {
+  margin-bottom: 1rem;
+}
+
+/* Form layout */
+form {
+  margin-top: 0.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.2rem;
+  color: #4b5563;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+  font-size: 1rem;
+}
+
+/* Focus state: blue border + subtle shadow */
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Invalid password: red border using :invalid */
+input[type="password"]:invalid {
+  border-color: #b91c1c;
+}
+
+/* Button and login text */
+.primary-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 2.5rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #596d48; /* spec color */
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  filter: brightness(1.05);
+}
+
+.login-text a {
+  color: #596d48;
+  font-weight: 600;
+  text-decoration: none;
+}
